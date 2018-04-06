@@ -37,14 +37,14 @@ Here, "name" is an image name which we will use later.
 ## Run image
 
 ```bash
-docker run --privileged -d -p 1935:1935 --name <name> <image_name>
+docker run --privileged -d -p 80:80 --name <name> <image_name>
 ```
 
 * `--privileged` allows container access camera device. (you can use --device=/dev/<your_camera_name> instead)
 
 * `-d` means detached mode - this command will return to your shell once container is started. To view container output, use `docker logs <name>`
 
-* `-p 1935:1935` exposes rtmp port to the world outside container
+* `-p 80:80` exposes http(hls) port to the world outside container
 
 * <image_name> is the *image* name from pervious step. It determines which image to run.
 
@@ -52,4 +52,4 @@ docker run --privileged -d -p 1935:1935 --name <name> <image_name>
 
 ## Stream
 
-Located at ```rtmp://<raspberry_addr>/rtmp/live```
+Located at ```http://<raspberry_addr>/live.m3u8 ```

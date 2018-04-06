@@ -1,2 +1,2 @@
 #!/bin/bash
-nginx && node index.js
+node index.js
