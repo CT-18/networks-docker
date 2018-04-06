@@ -1,6 +1,6 @@
 # Instruction
 
-## Installing docker on raspberry PI
+## Install docker on raspberry PI
 
 ```bash
 curl -sSL https://get.docker.com | sh
@@ -48,4 +48,8 @@ docker run --privileged -d -p 1935:1935 --name <name> <image_name>
 
 * <image_name> is the *image* name from pervious step. It determines which image to run.
 
-* <name> is the *container* name. Use it to manipulate particular container instance: pause, stop, view logs, etc...
+* \<name> is the *container* name. Use it to manipulate particular container instance: pause, stop, view logs, etc...
+
+## Stream
+
+Located at ```rtmp://<raspberry_addr>/rtmp/live```
